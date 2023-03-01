@@ -31,6 +31,8 @@ Vagrant.configure("2") do |config|
     b.vm.box = "debian/contrib-stretch64"
     b.vm.network "private_network", ip: "10.0.0.3"
     b.vm.hostname = "srv"
+	JE FORWARD LE PORT 80 VERS LE 8081
+
 
     b.vm.provision "shell", inline: <<-SHELL
       apt-get -y install apache2 ruby
