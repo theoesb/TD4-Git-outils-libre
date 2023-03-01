@@ -34,12 +34,13 @@ Vagrant.configure("2") do |config|
 
     b.vm.provision "shell", inline: <<-SHELL
       apt-get -y install apache2 ruby
+	  INSTALLATION DE PHP
       a2enmod cgi
+	  ACTIVATION DE PHP SUR APACHE2
       systemctl restart apache2.service
       cp /vagrant/srv/test1.cgi /usr/lib/cgi-bin/test1.cgi
       cp /vagrant/srv/test2.cgi /usr/lib/cgi-bin/test2.cgi
     SHELL
   end
-
 end
 # vim: ft=ruby syn=ruby fileencoding=utf-8 sw=2 ts=2 ai eol et si
